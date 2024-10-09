@@ -17,9 +17,10 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        // 'name',
         'email',
         'password',
+        'teacher_id'
     ];
 
     /**
@@ -31,6 +32,10 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    public function teacher(){
+        return $this->belongsTo(Teacher::class);
+    }
 
     /**
      * Get the attributes that should be cast.
