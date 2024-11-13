@@ -20,7 +20,8 @@ class User extends Authenticatable
         // 'name',
         'email',
         'password',
-        'teacher_id'
+        'teacher_id',
+        'role'
     ];
 
     /**

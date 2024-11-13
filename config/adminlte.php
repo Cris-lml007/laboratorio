@@ -335,6 +335,23 @@ return [
             'url' => 'admin/settings',
             'icon' => 'fas fa-user',
         ],
+        [
+            'text' => 'Administración',
+            'url' => '#',
+            'icon' => 'fa fa-lock',
+            'submenu' => [
+                [
+                    'text' => 'Gestion de Usuarios',
+                    'route' => 'dashboard.users',
+                    'icon' => 'fa fa-users'
+                ],
+                [
+                    'text' => 'Gestion de Laboratorios',
+                    'route' => 'dashboard.Laboratories',
+                    'icon' => 'fa fa-building'
+                ]
+            ]
+        ],
         ['header' => 'Feedback'],
         [
             'text' => 'Importante',
@@ -388,6 +405,21 @@ return [
     */
 
     'plugins' => [
+        'Bootstrap' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css'
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js'
+                ]
+            ]
+        ],
         'Datatables' => [
             'active' => false,
             'files' => [

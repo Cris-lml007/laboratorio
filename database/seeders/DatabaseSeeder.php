@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
         $t = Teacher::create([
             'ci' => 1,
-            'name' => 'ADMIN'
+            'name' => 'ADMIN',
+            'surname' => 'ADMIN'
         ]);
         User::create([
             'email' => 'admin@example.com',

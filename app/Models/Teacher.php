@@ -11,8 +11,13 @@ class Teacher extends Model
 
     public $fillable = [
         'ci',
+        'surname',
         'name',
         'specialty',
-        'phone'
+        'cellular'
     ];
+
+    public function user(){
+        return $this->hasOne(User::class);
+    }
 }
