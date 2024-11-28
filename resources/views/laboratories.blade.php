@@ -14,27 +14,6 @@
 <livewire:laboratory-table></livewire:laboratory-table>
 
 <x-modal id="modal" title="Añadir Laboratorio">
-    <div class="input-group">
-        <span class="input-group-text">Nombre</span>
-        <input class="form-control">
-    </div>
-    <div class="input-group">
-        <span class="input-group-text">Bloque</span>
-        <input class="form-control">
-    </div>
-    <div class="input-group">
-        <span class="input-group-text">Encargado</span>
-        <select class="form-select">
-            <option value="">Seleccione</option>
-        </select>
-    </div>
-    <div class="form-floating">
-        <textarea class="form-control" id="observations"></textarea>
-        <label for="observations">Descripcion</label>
-    </div>
-    <div class="modal-footer px-0">
-        <button wire:click="restart" class="btn-secondary btn" data-bs-dismiss="modal">Cerrar</button>
-        <button wire:click="restart" class="btn-success btn" data-bs-dismiss="modal">Guardar</button>
-    </div>
+    <livewire:laboratory-form></livewire:laboratory-form>
 </x-modal>
 @endsection

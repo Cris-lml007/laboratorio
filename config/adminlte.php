@@ -349,6 +349,11 @@ return [
                     'text' => 'Gestion de Laboratorios',
                     'route' => 'dashboard.Laboratories',
                     'icon' => 'fa fa-building'
+                ],
+                [
+                    'text' => 'Activos',
+                    'route' => 'dashboard.Laboratories',
+                    'icon' => 'fa fa-clipboard'
                 ]
             ]
         ],

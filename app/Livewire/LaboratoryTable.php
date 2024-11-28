@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Laboratory;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -9,8 +10,12 @@ class LaboratoryTable extends Component
 {
     public $listeners = ['update'];
 
-    public function getlaboratory($id){
-        $this->dispatch('get',$id);
+    public function getLaboratory($id){
+        $this->dispatch('getLaboratory',$id);
+    }
+
+    public function getlaboratories(){
+        return Laboratory::all();
     }
 
 
