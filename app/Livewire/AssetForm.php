@@ -43,8 +43,8 @@ class AssetForm extends Component
         $this->description = $asset->description;
         $this->price = $asset->price;
         $this->is_operative = $asset->operative == 1 ? true : false;
-        $this->type = $asset->type ?? null;
-        $this->laboratory = $asset->laboratory ?? null;
+        $this->type = $asset?->type->id ?? null;
+        $this->laboratory = $asset->laboratory?->id ?? null;
     }
 
     public function restart(){
