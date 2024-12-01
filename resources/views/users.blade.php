@@ -6,7 +6,10 @@
 
 @section('content')
 <div class="d-flex justify-content-end mb-1">
-    <button data-bs-toggle="modal" data-bs-target="#modal" class="btn btn-success">Añadir Usuario</button>
+    <button data-bs-toggle="modal" data-bs-target="#modal" class="btn btn-success">
+        <i class="fa fa-plus"></i>
+         Añadir Usuario
+    </button>
 </div>
 <livewire:user-table></livewire:user-table>
 
