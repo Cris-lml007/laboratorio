@@ -13,6 +13,7 @@ class Asset extends Model
         'description',
         'price',
         'laboratory_id',
+        'type_id',
         'operative'
     ];
 

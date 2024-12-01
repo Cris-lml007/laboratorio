@@ -8,3 +8,10 @@
         <button wire:click="updateOrCreate" class="btn btn-success">Guardar</button>
     </div>
 </div>
+@script
+    <script>
+        $wire.on('closeModal', () => {
+        $('#modalType').modal('hide');
+        });
+    </script>
+@endscript

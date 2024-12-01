@@ -19,4 +19,7 @@
             @endforeach
         </tbody>
     </table>
+    <div class="card-footer">
+        {{$assets->links() ?? ''}}
+    </div>
 </div>

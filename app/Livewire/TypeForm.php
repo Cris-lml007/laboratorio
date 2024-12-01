@@ -19,8 +19,8 @@ class TypeForm extends Component
         ],[
             'name' => $this->name
         ]);
-        $this->dispatch('update');
-        // $this->dispatch('closeModal','modalType');
+        $this->dispatch('updateType');
+        $this->dispatch('closeModal');
     }
 
 

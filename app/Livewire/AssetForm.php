@@ -24,10 +24,10 @@ class AssetForm extends Component
     public function updateOrCreate(){
         Asset::updateOrCreate([
             'id' => $this->id ?? null,
+        ],[
             'name' => $this->name,
             'description' => $this->description,
-            'price' => $this->price
-        ],[
+            'price' => $this->price,
             'operative' => $this->is_operative == 1 ? true : false,
             'type_id' => $this->type,
             'laboratory_id' => $this->laboratory
