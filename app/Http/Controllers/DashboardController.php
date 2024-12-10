@@ -3,9 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Laboratory;
-use App\Models\Maintenance;
-use Carbon\Carbon;
-use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -31,9 +28,6 @@ class DashboardController extends Controller
     }
 
     public function maintenance(){
-        $maintenances = Maintenance::whereHas('laboratory',function($query){
-            $query->where('teacher_id',Auth::user()->teacher->id);
-        })->where('date',Carbon::now()->toDateString())->where('active',1)->paginate(10);
-        return view('maintenance',compact(['maintenances']));
+        return view('maintenance');
     }
 }

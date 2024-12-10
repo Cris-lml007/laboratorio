@@ -20,4 +20,8 @@ class Teacher extends Model
     public function user(){
         return $this->hasOne(User::class);
     }
+
+    public function laboratories(){
+        return $this->hasMany(Laboratory::class,'teacher_id','id');
+    }
 }
