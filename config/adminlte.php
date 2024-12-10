@@ -154,8 +154,8 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
@@ -317,12 +317,12 @@ return [
         ],
         [
             'text' => 'Laboratorios',
-            'url' => 'admin/settings',
+            'route' => 'dashboard.laboratories',
             'icon' => 'fa fa-building',
         ],
         [
             'text' => 'Matenimiento',
-            'url' => 'admin/settings',
+            'route' => 'dashboard.maintenance',
             'icon' => 'fas fa-tools',
         ],
         [
@@ -341,18 +341,18 @@ return [
             'icon' => 'fa fa-lock',
             'submenu' => [
                 [
-                    'text' => 'Gestion de Usuarios',
-                    'route' => 'dashboard.users',
+                    'text' => 'Gestión de Usuarios',
+                    'route' => 'administration.users',
                     'icon' => 'fa fa-users'
                 ],
                 [
-                    'text' => 'Gestion de Laboratorios',
-                    'route' => 'dashboard.Laboratories',
+                    'text' => 'Gestión de Laboratorios',
+                    'route' => 'administration.laboratories',
                     'icon' => 'fa fa-building'
                 ],
                 [
-                    'text' => 'Activos',
-                    'route' => 'dashboard.Laboratories',
+                    'text' => 'Gestión de Activos',
+                    'route' => 'administration.actives',
                     'icon' => 'fa fa-clipboard'
                 ]
             ]

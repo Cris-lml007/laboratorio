@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\Asset;
 use App\Models\Laboratory;
 use App\Models\Type;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class AssetForm extends Component
@@ -30,7 +31,8 @@ class AssetForm extends Component
             'price' => $this->price,
             'operative' => $this->is_operative == 1 ? true : false,
             'type_id' => $this->type,
-            'laboratory_id' => $this->laboratory
+            'laboratory_id' => $this->laboratory,
+            'user_id' => Auth::user()->id
         ]);
         $this->reset();
         $this->dispatch('updateAsset');

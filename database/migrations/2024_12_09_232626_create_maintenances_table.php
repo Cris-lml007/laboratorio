@@ -11,15 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('assets', function (Blueprint $table) {
+        Schema::create('maintenances', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('laboratory_id')->nullable();
-            $table->unsignedBigInteger('type_id')->nullable();
             $table->unsignedBigInteger('user_id');
-            $table->string('name');
-            $table->text('description');
-            $table->float('price');
-            $table->boolean('operative')->default(true);
+            $table->unsignedBigInteger('laboratory_id');
+            $table->integer('type');
+            $table->string('description');
+            $table->boolean('active')->default(true);
+            $table->date('date');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('assets');
+        Schema::dropIfExists('maintenances');
     }
 };

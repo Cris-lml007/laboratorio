@@ -1,19 +1,26 @@
 @extends('adminlte::page')
-
 @section('content_header')
-<h1>Gestión de Laboratorios</h1>
+<h1>Laboratorios</h1>
 @endsection
-
 @section('content')
-<div class="d-flex justify-content-end mb-1">
-    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal">
-        <i class="fa fa-plus"></i>
-        Añadir Laboratorio
-    </button>
+<div class="card">
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <th>id</th>
+                <th>Bloque</th>
+                <th>Nombre</th>
+            </thead>
+            <tbody>
+                @foreach ($laboratories ?? [] as $laboratory)
+                <tr onclick="location.href='{{route('dashboard.laboratory',$laboratory->id)}}'" style="cursor: pointer;">
+                    <td>{{$laboratory->id}}</td>
+                    <td>{{$laboratory->block}}</td>
+                    <td>{{$laboratory->name}}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 </div>
-<livewire:laboratory-table></livewire:laboratory-table>
-
-<x-modal id="modal" title="Añadir Laboratorio">
-    <livewire:laboratory-form></livewire:laboratory-form>
-</x-modal>
 @endsection

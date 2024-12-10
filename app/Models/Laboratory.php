@@ -19,4 +19,8 @@ class Laboratory extends Model
     public function manager(){
         return $this->belongsTo(Teacher::class,'teacher_id','id');
     }
+
+    public function assets(){
+        return $this->hasMany(Asset::class,'laboratory_id','id');
+    }
 }

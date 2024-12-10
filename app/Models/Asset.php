@@ -14,7 +14,8 @@ class Asset extends Model
         'price',
         'laboratory_id',
         'type_id',
-        'operative'
+        'operative',
+        'user_id'
     ];
 
     public function laboratory(){
@@ -23,5 +24,9 @@ class Asset extends Model
 
     public function type(){
         return $this->belongsTo(Type::class);
+    }
+
+    public function createBy(){
+        return $this->belongsTo(User::class);
     }
 }
