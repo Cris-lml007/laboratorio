@@ -10,7 +10,7 @@
         <h5 class="card-title">Información</h5>
         <div class="input-group">
             <span class="input-group-text">Encargado</span>
-            <input readonly type="text" class="form-control" value="{{$laboratory->manager->surname . ' ' . $laboratory->manager->name}}">
+            <input readonly type="text" class="form-control" value="{{($laboratory?->manager?->surname ?? '') . ' ' . ($laboratory?->manager?->name ?? '')}}">
         </div>
         <div class="input-group">
             <span class="input-group-text">Id Laboratorio</span>
